@@ -1,0 +1,1730 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+}
+
+
+/* =========================================
+   EMOJI FONT
+========================================= */
+
+.profileReactionButton,
+.profileReactionPicker,
+.profileReaction,
+.profileReactionCount,
+.profileCommentReactionButton,
+.profileCommentReactionPicker,
+.profileCommentReaction,
+.profileCommentReactionCount,
+.homeReactionButton,
+.homeReactionPicker {
+    font-family:
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        "Apple Color Emoji",
+        sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.siteHeader {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: white;
+
+    border-bottom: 1px solid #ddd;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.siteHeaderInner {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 16px 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.siteLogo {
+    margin: 0;
+
+    font-size: 22px;
+
+    white-space: nowrap;
+}
+
+.siteNav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.siteNav a {
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    padding: 0;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    background: none;
+}
+
+.siteNav a:hover {
+    color: #222;
+
+    background: none;
+}
+
+.siteNav a.active {
+    color: #111;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    padding: 0;
+
+    margin: 0;
+
+    background: none;
+
+    border-radius: 0;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.profilePage {
+    width: min(900px, calc(100% - 30px));
+    margin: 28px auto 60px;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profileCard {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow:
+        0 3px 14px rgba(0, 0, 0, 0.04);
+    margin-bottom: 14px;
+    min-height: 365px;
+}
+
+
+/* =========================================
+   COVER PHOTO
+========================================= */
+
+.profileCover {
+    position: relative;
+    height: 185px;
+    background:
+        linear-gradient(
+            135deg,
+            #e9e9e9,
+            #f6f6f6
+        );
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.profileCover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(0, 0, 0, 0.12)
+        );
+    pointer-events: none;
+}
+
+.coverPhotoButton {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.12);
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.coverPhotoButton:hover {
+    background: #ffffff;
+    box-shadow:
+        0 3px 9px rgba(0, 0, 0, 0.16);
+}
+
+#coverPhotoInput {
+    display: none;
+}
+
+
+/* =========================================
+   PROFILE MAIN
+========================================= */
+
+.profileMain {
+    position: relative;
+    min-height: 180px;
+    padding: 0;
+}
+
+
+/* =========================================
+   PROFILE PICTURE
+========================================= */
+
+.profilePictureArea {
+    position: absolute;
+    left: 28px;
+    top: -65px;
+    z-index: 5;
+    width: 135px;
+}
+
+.profilePicture {
+    display: block;
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #eeeeee;
+    border: 5px solid #ffffff;
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profilePictureUpload {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.profilePictureUpload input {
+    display: none;
+}
+
+.uploadLabel {
+    font-size: 11px;
+    color: #777;
+    cursor: pointer;
+}
+
+.uploadLabel:hover {
+    color: #222;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   PROFILE INFO
+========================================= */
+
+.profileInfo {
+    position: absolute;
+    left: 190px;
+    right: 28px;
+    top: 18px;
+    min-width: 0;
+}
+
+.profileInfo h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+    line-height: 1.2;
+    color: #222;
+}
+
+.profileBio {
+    margin: 0 0 13px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   PROFILE STATS
+========================================= */
+
+.profileStats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+}
+
+.profileStats span {
+    white-space: nowrap;
+}
+
+.profileStats strong {
+    color: #222;
+}
+
+
+/* =========================================
+   PROFILE ACTIONS
+========================================= */
+
+.profileActions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 13px;
+}
+
+.primaryButton,
+.secondaryButton {
+    border: none;
+    border-radius: 9px;
+    padding: 9px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.primaryButton {
+    background: #222;
+    color: #ffffff;
+}
+
+.primaryButton:hover {
+    background: #000;
+}
+
+.secondaryButton {
+    background: #eeeeee;
+    color: #333;
+}
+
+.secondaryButton:hover {
+    background: #e3e3e3;
+}
+
+.primaryButton:active,
+.secondaryButton:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   PROFILE TABS
+========================================= */
+
+.profileTabs {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.profileTab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #777;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.profileTab:hover {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.profileTab.active {
+    background: #222;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TAB PANELS
+========================================= */
+
+.profileTabPanel {
+    display: none;
+}
+
+.profileTabPanel.active {
+    display: block;
+}
+
+
+/* =========================================
+   GENERAL CONTENT CARD
+========================================= */
+
+.contentCard {
+    background: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 20px;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sectionHeader h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.sectionHeader p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+.sectionLink {
+    color: #555;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sectionLink:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   CHARACTER EMPTY STATE
+========================================= */
+
+.characterEmptyState {
+    margin-top: 22px;
+    padding: 34px 20px;
+    text-align: center;
+    background: #f8f8f8;
+    border: 1px dashed #d8d8d8;
+    border-radius: 12px;
+}
+
+.characterEmptyIcon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eeeeee;
+    color: #555;
+    font-size: 20px;
+}
+
+.characterEmptyState h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: #333;
+}
+
+.characterEmptyState p {
+    max-width: 430px;
+    margin: 0 auto 14px;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.characterCreateLink {
+    display: inline-block;
+    text-decoration: none;
+    background: #222;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px 13px;
+    font-size: 12px;
+}
+
+.characterCreateLink:hover {
+    background: #000;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.aboutSection {
+    margin-bottom: 20px;
+}
+
+.aboutItem {
+    display: flex;
+    gap: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.aboutItem:last-of-type {
+    border-bottom: none;
+}
+
+.aboutItemIcon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #f1f1f1;
+    color: #555;
+    font-size: 15px;
+}
+
+.aboutItem h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+}
+
+.aboutItem p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.aboutStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.aboutStat {
+    padding: 15px 10px;
+    text-align: center;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+.aboutStat strong {
+    display: block;
+    color: #222;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+.aboutStat span {
+    color: #888;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   POSTS SECTION
+========================================= */
+
+.postsSection {
+    margin-top: 8px;
+}
+
+.sectionTitle {
+    margin-bottom: 12px;
+}
+
+.sectionTitle h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.sectionTitle p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   POST COMPOSER
+========================================= */
+
+.postComposer {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 18px;
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+#profilePostInput {
+    width: 100%;
+    min-height: 95px;
+    resize: vertical;
+    border: 1px solid #dedede;
+    border-radius: 11px;
+    padding: 12px 13px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background: #f8f8f8;
+    outline: none;
+}
+
+#profilePostInput:focus {
+    border-color: #bbb;
+    background: #ffffff;
+}
+
+#profilePostInput::placeholder {
+    color: #999;
+}
+
+.composerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11px;
+    gap: 10px;
+}
+
+.composerPhoto {
+    display: flex;
+    align-items: center;
+}
+
+.photoLabel {
+    display: inline-block;
+    color: #666;
+    background: #f2f2f2;
+    border-radius: 8px;
+    padding: 8px 11px;
+    font-size: 12px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.photoLabel:hover {
+    background: #e8e8e8;
+    color: #222;
+}
+
+#profilePostImage {
+    display: none;
+}
+
+.postButton {
+    border: none;
+    background: #222;
+    color: #ffffff;
+    border-radius: 9px;
+    padding: 9px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.postButton:hover {
+    background: #000;
+}
+
+.postButton:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   PROFILE POSTS
+   HOME-STYLE POST CARD
+========================================= */
+
+.profilePost.homePost {
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow:
+        0 2px 9px rgba(0, 0, 0, 0.035);
+    overflow: visible;
+}
+
+
+/* =========================================
+   POST HEADER
+========================================= */
+
+.profilePost.homePost .homePostHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+}
+
+.profilePost.homePost .homePostAuthorArea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.profilePost.homePost .homePostAvatar {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    color: #777;
+    font-size: 20px;
+}
+
+.profilePost.homePost .homePostAvatar img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profilePost.homePost .homePostAuthorDetails {
+    min-width: 0;
+}
+
+.profilePost.homePost .homePostAuthorName {
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.profilePost.homePost .homePostTimestamp {
+    margin-top: 2px;
+    color: #888;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.profilePost.homePost .homePostMenu {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.profilePost.homePost .homePostMenuButton {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #777;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePost.homePost .homePostMenuButton:hover {
+    background: #f1f1f1;
+    color: #222;
+}
+
+
+/* =========================================
+   POST MENU
+========================================= */
+
+.profilePost.homePost .homePostMenuDropdown {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    z-index: 20;
+    min-width: 125px;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.12);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 2px;
+}
+
+.profilePost.homePost .homePostMenuDropdown button {
+    width: 100% !important;
+    min-width: 100%;
+    flex: 0 0 auto !important;
+    display: block !important;
+    border: none;
+    background: transparent;
+    color: #555;
+    text-align: left;
+    border-radius: 7px;
+    padding: 8px 10px;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.4;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.profilePost.homePost .homePostMenuDropdown button:hover {
+    background: #f2f2f2;
+    color: #222;
+}
+
+
+/* =========================================
+   SHARED POST LABEL
+========================================= */
+
+.profilePost.homePost .homePostSharedLabel {
+    margin-top: 10px;
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   POST CONTENT
+========================================= */
+
+.profilePost.homePost .homePostContent {
+    margin-top: 13px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: left;
+}
+
+.profilePost.homePost .homePostText {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+.profilePost.homePost .homePostImages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.profilePost.homePost .homePostImageWrapper {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 11px;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.profilePost.homePost .homePostImage {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: 560px;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+
+/* =========================================
+   POST ACTIONS
+========================================= */
+
+.profilePost.homePost .homePostActions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 14px;
+    padding-top: 9px;
+    border-top: 1px solid #eeeeee;
+}
+
+.profilePost.homePost .homePostActionButton {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    color: #666;
+    border-radius: 8px;
+    padding: 8px 7px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.profilePost.homePost .homePostActionButton:hover {
+    background: #f2f2f2;
+    color: #222;
+}
+
+.profilePost.homePost .homePostActionButton.active {
+    color: #222;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROFILE REACTION AREA
+========================================= */
+
+.profileReactionArea {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   PROFILE REACTION PICKER
+========================================= */
+
+.profilePost.homePost .profileReactionPicker,
+.profilePost.homePost .homeReactionPicker {
+    display: none;
+    align-items: center;
+    gap: 3px;
+    width: fit-content;
+    padding: 6px;
+    margin-top: 5px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.09);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 6px);
+    transform: translateX(-50%);
+    z-index: 50;
+}
+
+.profilePost.homePost .profileReactionPicker.visible,
+.profilePost.homePost .homeReactionPicker.visible {
+    display: flex;
+}
+
+.profilePost.homePost .profileReaction,
+.profilePost.homePost .homeReactionPicker button {
+    border: none;
+    background: transparent;
+    font-family:
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        "Apple Color Emoji",
+        sans-serif;
+    font-size: 19px;
+    padding: 5px 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.profilePost.homePost .profileReaction:hover,
+.profilePost.homePost .homeReactionPicker button:hover {
+    transform: scale(1.2);
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   OLD PROFILE REACTION COUNT SUPPORT
+========================================= */
+
+.profilePost.homePost .profileReactionCount {
+    color: #777;
+    font-size: 13px;
+    margin: 4px 0 10px;
+}
+
+
+/* =========================================
+   COMMENTS
+========================================= */
+
+.profileCommentBox {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #eeeeee;
+}
+
+.profileCommentInput {
+    width: 100%;
+    min-height: 42px;
+    box-sizing: border-box;
+    resize: vertical;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    padding: 10px 13px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    background: #f8f8f8;
+}
+
+.profileCommentInput:focus {
+    border-color: #aaa;
+    background: #ffffff;
+}
+
+.profileAddCommentButton {
+    border: none;
+    background: #222;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.profileCommentList {
+    margin-top: 14px;
+}
+
+.profileComment {
+    background: #f5f5f5;
+    border-radius: 11px;
+    padding: 11px 12px;
+    margin-bottom: 9px;
+}
+
+.profileCommentText {
+    margin: 0 0 7px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    overflow-wrap: anywhere;
+}
+
+.profileCommentText strong {
+    color: #222;
+}
+
+.profileComment > button {
+    border: none;
+    background: transparent;
+    color: #777;
+    font-size: 11px;
+    padding: 4px 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.profileComment > button:hover {
+    background: #e7e7e7;
+    color: #333;
+}
+
+
+/* =========================================
+   COMMENT / REPLY REACTIONS
+========================================= */
+
+.profileCommentReactionPicker {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    width: fit-content;
+    padding: 5px;
+    margin: 4px 0;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 9px;
+}
+
+.profileCommentReaction {
+    border: none;
+    background: transparent;
+    font-family:
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        "Apple Color Emoji",
+        sans-serif;
+    font-size: 17px;
+    padding: 4px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.profileCommentReaction:hover {
+    background: #f2f2f2;
+    transform: scale(1.15);
+}
+
+.profileCommentReactionCount {
+    color: #888;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   REPLIES
+========================================= */
+
+.profileReplyBox {
+    margin-top: 8px;
+    margin-left: 20px;
+    padding-left: 12px;
+    border-left: 2px solid #e0e0e0;
+}
+
+.profileReplyInput {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 38px;
+    resize: vertical;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 8px 11px;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.profileReplyInput:focus {
+    border-color: #aaa;
+}
+
+.profileAddReplyButton {
+    border: none;
+    background: #333;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.profileReplyList {
+    margin-top: 10px;
+}
+
+.profileReply {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin-bottom: 7px;
+}
+
+.profileReplyText {
+    margin: 0 0 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #444;
+    overflow-wrap: anywhere;
+}
+
+.profileReply > button {
+    border: none;
+    background: transparent;
+    color: #888;
+    font-size: 10px;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.profileReply > button:hover {
+    color: #333;
+}
+
+
+/* =========================================
+   SHARED POSTS
+========================================= */
+
+.profileSharedPostLabel {
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.profileSharedPostLabel strong {
+    color: #222;
+}
+
+.profileSharedPostContent {
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 8px;
+}
+
+.profileSharedPostContent h3 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #222;
+}
+
+.profileSharedPostContent .profilePostText {
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   EDIT / DELETE
+========================================= */
+
+.profileEditButton,
+.profileDeleteButton,
+.profileCommentEditButton,
+.profileCommentDeleteButton,
+.profileReplyEditButton,
+.profileReplyDeleteButton {
+    color: #888;
+}
+
+.profileEditButton:hover,
+.profileDeleteButton:hover,
+.profileCommentEditButton:hover,
+.profileCommentDeleteButton:hover,
+.profileReplyEditButton:hover,
+.profileReplyDeleteButton:hover {
+    color: #333;
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+    outline: 2px solid #999;
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   PROFILE PICTURE VIEWER
+========================================= */
+
+.profilePictureViewerButton {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+}
+
+.profilePictureViewerButton:hover .profilePicture {
+    filter: brightness(0.88);
+}
+
+.profilePictureViewer {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease;
+    z-index: 9999;
+}
+
+.profilePictureViewer.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.profilePictureViewer img {
+    max-width: min(80vw, 700px);
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.closeProfilePictureViewer {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.closeProfilePictureViewer:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+body.viewerOpen {
+    overflow: hidden;
+}
+
+
+/* =========================================
+   COVER PHOTO ADJUSTMENT
+========================================= */
+
+.coverAdjustControls {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    width: min(430px, calc(100% - 36px));
+    padding: 14px 16px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 12px;
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.18);
+    display: none;
+    z-index: 10;
+}
+
+.coverAdjustControls.visible {
+    display: block;
+}
+
+.coverAdjustControls > span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#coverPositionInput {
+    width: 100%;
+    cursor: pointer;
+}
+
+.coverAdjustButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.coverAdjustButtons button {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FRIEND BUTTON
+========================================= */
+
+#addFriendButton {
+    min-width: 120px;
+}
+
+#addFriendButton.friendActive {
+    background: #e9e9e9;
+    color: #333;
+    border-color: #d0d0d0;
+}
+
+#addFriendButton:hover {
+    filter: brightness(0.96);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .siteHeaderInner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 13px 16px;
+    }
+
+    .siteNav {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .siteNav a {
+        white-space: nowrap;
+    }
+
+    .profilePage {
+        width: min(calc(100% - 18px), 900px);
+        margin-top: 15px;
+    }
+
+    .profileCard {
+        min-height: 350px;
+    }
+
+    .profileCover {
+        height: 155px;
+    }
+
+    .profileMain {
+        min-height: 195px;
+    }
+
+    .profilePictureArea {
+        left: 18px;
+        top: -55px;
+        width: 110px;
+    }
+
+    .profilePicture {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profileInfo {
+        left: 150px;
+        right: 18px;
+        top: 15px;
+    }
+
+    .profileInfo h2 {
+        font-size: 21px;
+    }
+
+    .profileStats {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .profileActions {
+        flex-wrap: wrap;
+    }
+
+    .profileTabs {
+        margin-bottom: 15px;
+    }
+
+    .profileTab {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    .sectionHeader {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .postComposer {
+        padding: 12px;
+    }
+
+    .profilePost.homePost {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .profilePost.homePost .homePostActionButton {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 11px;
+    }
+
+    .profileComment {
+        padding: 9px 10px;
+    }
+
+    .profileReplyBox {
+        margin-left: 10px;
+        padding-left: 9px;
+    }
+
+    .aboutStats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .siteLogo {
+        font-size: 18px;
+    }
+
+    .siteNav a {
+        font-size: 12px;
+        padding: 7px 8px;
+    }
+
+    .profileCard {
+        min-height: 320px;
+    }
+
+    .profileCover {
+        height: 135px;
+    }
+
+    .profileMain {
+        min-height: 185px;
+    }
+
+    .profilePictureArea {
+        left: 15px;
+        top: -47px;
+        width: 95px;
+    }
+
+    .profilePicture {
+        width: 95px;
+        height: 95px;
+    }
+
+    .profileInfo {
+        left: 125px;
+        right: 15px;
+        top: 13px;
+    }
+
+    .profileInfo h2 {
+        font-size: 19px;
+        line-height: 1.2;
+    }
+
+    .profileBio {
+        font-size: 12px;
+    }
+
+    .profileStats {
+        gap: 9px;
+        font-size: 12px;
+    }
+
+    .profileActions {
+        width: 100%;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        flex: 1;
+    }
+
+    .composerBottom {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .postButton {
+        width: 100%;
+    }
+
+    .coverPhotoButton {
+        right: 10px;
+        bottom: 10px;
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    .profileTabs {
+        gap: 3px;
+    }
+
+    .profileTab {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+
+    .profilePost.homePost {
+        padding: 13px;
+        border-radius: 12px;
+    }
+
+    .profilePost.homePost .homePostAvatar {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 18px;
+    }
+
+    .profilePost.homePost .homePostAuthorName {
+        font-size: 13px;
+    }
+
+    .profilePost.homePost .homePostText {
+        font-size: 13px;
+    }
+
+    .profilePost.homePost .homePostActions {
+        gap: 2px;
+    }
+
+    .profilePost.homePost .homePostActionButton {
+        font-size: 10px;
+        padding: 8px 4px;
+    }
+}
+
+
+/* =========================================
+   MOBILE VIEWER
+========================================= */
+
+@media (max-width: 600px) {
+
+    .profilePictureViewer {
+        padding: 20px;
+    }
+
+    .profilePictureViewer img {
+        max-width: 85vw;
+        max-height: 70vh;
+    }
+
+    .closeProfilePictureViewer {
+        top: 15px;
+        right: 15px;
+    }
+
+    .coverAdjustControls {
+        bottom: 10px;
+        width: calc(100% - 20px);
+    }
+}

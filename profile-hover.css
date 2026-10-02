@@ -1,0 +1,354 @@
+/* =========================================
+   ROLEVERSE HAVEN
+   PROFILE HOVER CARD
+========================================= */
+
+
+.roleverseProfileHoverCard {
+
+    position: fixed;
+
+    width: 320px;
+
+    max-width: calc(100vw - 32px);
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.16);
+
+    z-index: 99999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translateY(6px)
+        scale(0.98);
+
+    transition:
+        opacity 0.16s ease,
+        transform 0.16s ease,
+        visibility 0.16s ease;
+
+}
+
+
+.roleverseProfileHoverCard.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================
+   INNER CARD
+========================================= */
+
+.profileHoverCardInner {
+
+    padding: 18px;
+
+}
+
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.profileHoverAvatarWrapper {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+}
+
+
+.profileHoverAvatar {
+
+    width: 82px;
+
+    height: 82px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeeeee,
+            #f8f8f8
+        );
+
+    border: 3px solid #ffffff;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.14);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.profileHoverAvatarImage {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+
+}
+
+
+.profileHoverAvatarFallback {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.profileHoverInformation {
+
+    text-align: center;
+
+}
+
+
+.profileHoverName {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #222222;
+
+    margin-bottom: 5px;
+
+}
+
+
+.profileHoverBio {
+
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #777777;
+
+    margin-bottom: 13px;
+
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.profileHoverStats {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    font-size: 12px;
+
+    color: #777777;
+
+    margin-bottom: 16px;
+
+}
+
+
+.profileHoverStats span {
+
+    white-space: nowrap;
+
+}
+
+
+.profileHoverStats strong {
+
+    color: #333333;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================
+   VIEW PROFILE BUTTON
+========================================= */
+
+.profileHoverViewButton {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 9px 14px;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+
+}
+
+
+.profileHoverViewButton:hover {
+
+    background: #444444;
+
+}
+
+
+.profileHoverViewButton:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* =========================================
+   PROFILE NAME LINKS
+========================================= */
+
+.profileNameLink {
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+
+.profileNameLink:hover {
+
+    text-decoration: underline;
+
+}
+
+
+.profileNameLink:focus-visible {
+
+    outline: 2px solid #555555;
+
+    outline-offset: 3px;
+
+    border-radius: 3px;
+
+}
+
+
+/* =========================================
+   HOME POST AUTHOR
+========================================= */
+
+.homePostAuthorName.profileNameLink {
+
+    transition:
+        color 0.15s ease;
+
+}
+
+
+.homePostAuthorName.profileNameLink:hover {
+
+    color: #555555;
+
+}
+
+
+/* =========================================
+   PROFILE PAGE NAME
+========================================= */
+
+#profileName.profileNameLink {
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   SMALL SCREENS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .roleverseProfileHoverCard {
+
+        width: 290px;
+
+    }
+
+
+    .profileHoverCardInner {
+
+        padding: 16px;
+
+    }
+
+
+    .profileHoverAvatar {
+
+        width: 72px;
+
+        height: 72px;
+
+    }
+
+}

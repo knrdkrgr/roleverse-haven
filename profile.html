@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Profile - Roleverse Haven</title>
+
+<link
+    rel="stylesheet"
+    href="profile-posts.css"
+>
+
+<link
+    rel="stylesheet"
+    href="profile-hover.css"
+>
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================== -->
+
+<header class="siteHeader">
+
+    <div class="siteHeaderInner">
+
+        <h1 class="siteLogo">
+            Roleverse Haven
+        </h1>
+
+
+        <nav class="siteNav">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a
+                href="profile.html"
+                class="active"
+            >
+                Profile
+            </a>
+
+            <a href="characters.html">
+                Characters
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="notifications.html">
+                Notifications
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN
+========================================== -->
+
+<main class="profilePage">
+
+
+    <!-- =========================================
+         PROFILE CARD
+    ========================================== -->
+
+    <section class="profileCard">
+
+
+        <!-- COVER PHOTO -->
+
+        <div
+            class="profileCover"
+            id="profileCover"
+        >
+
+            <label
+                for="coverPhotoInput"
+                class="coverPhotoButton"
+            >
+                Change cover photo
+            </label>
+
+
+            <input
+                type="file"
+                id="coverPhotoInput"
+                accept="image/*"
+            >
+
+
+            <!-- COVER ADJUSTMENT CONTROLS -->
+
+            <div
+                id="coverAdjustControls"
+                class="coverAdjustControls"
+            >
+
+                <span>
+                    Adjust cover photo
+                </span>
+
+
+                <input
+                    type="range"
+                    id="coverPositionInput"
+                    min="0"
+                    max="100"
+                    value="50"
+                >
+
+
+                <div class="coverAdjustButtons">
+
+                    <button
+                        type="button"
+                        id="coverCancelButton"
+                        class="secondaryButton"
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="coverSaveButton"
+                        class="primaryButton"
+                    >
+                        Save
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =====================================
+             PROFILE MAIN
+        ====================================== -->
+
+        <div class="profileMain">
+
+
+            <!-- PROFILE PICTURE -->
+
+            <div class="profilePictureArea">
+
+
+                <button
+                    type="button"
+                    id="profilePictureViewerButton"
+                    class="profilePictureViewerButton"
+                    aria-label="View profile picture"
+                >
+
+                    <img
+                        id="profilePicture"
+                        src=""
+                        alt="Profile Picture"
+                        class="profilePicture"
+                    >
+
+                </button>
+
+
+                <div class="profilePictureUpload">
+
+                    <label
+                        for="profilePictureInput"
+                        class="uploadLabel"
+                    >
+                        Change photo
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="profilePictureInput"
+                        accept="image/*"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 PROFILE INFORMATION
+            ================================== -->
+
+            <div class="profileInfo">
+
+
+                <h2 id="profileName">
+                    Display Name
+                </h2>
+
+
+                <p
+                    id="profileBio"
+                    class="profileBio"
+                >
+                    Roleplayer | Writer | Character enthusiast
+                </p>
+
+
+                <!-- PROFILE STATS -->
+
+                <div class="profileStats">
+
+
+                    <span>
+
+                        <strong id="friendCount">
+                            0
+                        </strong>
+
+                        Friends
+
+                    </span>
+
+
+                    <span>
+
+                        <strong id="followerCount">
+                            0
+                        </strong>
+
+                        Followers
+
+                    </span>
+
+
+                    <span>
+
+                        <strong id="followingCount">
+                            0
+                        </strong>
+
+                        Following
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- PROFILE ACTIONS -->
+
+                <div class="profileActions">
+
+
+                    <button
+                        id="addFriendButton"
+                        class="secondaryButton"
+                    >
+                        Add Friend
+                    </button>
+
+
+                    <button
+                        id="followButton"
+                        class="primaryButton"
+                    >
+                        Follow
+                    </button>
+
+
+                    <button
+                        id="editProfileButton"
+                        class="secondaryButton"
+                    >
+                        Edit Profile
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROFILE NAVIGATION
+    ========================================== -->
+
+    <nav
+        class="profileTabs"
+        role="tablist"
+        aria-label="Profile sections"
+    >
+
+
+        <button
+            type="button"
+            class="profileTab active"
+            data-tab="posts"
+            role="tab"
+            aria-selected="true"
+        >
+            Posts
+        </button>
+
+
+        <button
+            type="button"
+            class="profileTab"
+            data-tab="characters"
+            role="tab"
+            aria-selected="false"
+        >
+            Characters
+        </button>
+
+
+        <button
+            type="button"
+            class="profileTab"
+            data-tab="about"
+            role="tab"
+            aria-selected="false"
+        >
+            About
+        </button>
+
+
+    </nav>
+
+
+
+    <!-- =========================================
+         TAB: POSTS
+    ========================================== -->
+
+    <section
+        class="profileTabPanel active"
+        data-panel="posts"
+        role="tabpanel"
+    >
+
+
+        <section class="postsSection">
+
+
+            <div class="sectionTitle">
+
+                <h2>
+                    Posts
+                </h2>
+
+                <p>
+                    Share something with the Roleverse.
+                </p>
+
+            </div>
+
+
+
+            <!-- POST COMPOSER -->
+
+            <div class="postComposer">
+
+
+                <textarea
+                    id="profilePostInput"
+                    placeholder="What's on your mind?"
+                ></textarea>
+
+
+                <div class="composerBottom">
+
+
+                    <div class="composerPhoto">
+
+                        <label
+                            for="profilePostImage"
+                            class="photoLabel"
+                        >
+                            📷 Add Photos
+                        </label>
+
+
+                        <input
+                            type="file"
+                            id="profilePostImage"
+                            accept="image/*"
+                        >
+
+                    </div>
+
+
+                    <button
+                        id="profilePostButton"
+                        class="postButton"
+                    >
+                        Post
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- POST LIST -->
+
+            <div id="profilePostList">
+
+                <!-- Profile posts will appear here -->
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         TAB: CHARACTERS
+    ========================================== -->
+
+    <section
+        class="profileTabPanel"
+        data-panel="characters"
+        role="tabpanel"
+    >
+
+
+        <section class="contentCard characterSection">
+
+
+            <div class="sectionHeader">
+
+                <div>
+
+                    <h2>
+                        Characters
+                    </h2>
+
+                    <p>
+                        Your created characters will appear here.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="characters.html"
+                    class="sectionLink"
+                >
+                    View Characters
+                </a>
+
+            </div>
+
+
+            <div
+                id="profileCharacterEmptyState"
+                class="characterEmptyState"
+            >
+
+                <!-- Filled by profile-upgrade.js -->
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         TAB: ABOUT
+    ========================================== -->
+
+    <section
+        class="profileTabPanel"
+        data-panel="about"
+        role="tabpanel"
+    >
+
+
+        <section class="contentCard aboutSection">
+
+
+            <div class="sectionTitle">
+
+                <h2>
+                    About
+                </h2>
+
+                <p>
+                    Get to know this roleplayer.
+                </p>
+
+            </div>
+
+
+            <!-- BIO -->
+
+            <div class="aboutItem">
+
+                <div class="aboutItemIcon">
+                    ✦
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Bio
+                    </h3>
+
+                    <p id="aboutBio">
+                        Roleplayer | Writer | Character enthusiast
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="aboutItem">
+
+                <div class="aboutItemIcon">
+                    ✎
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        About Me
+                    </h3>
+
+                    <p id="aboutDescription">
+                        A short introduction about this roleplayer
+                        will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STATS -->
+
+            <div class="aboutStats">
+
+
+                <div class="aboutStat">
+
+                    <strong id="aboutFriendCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Friends
+                    </span>
+
+                </div>
+
+
+                <div class="aboutStat">
+
+                    <strong id="aboutFollowerCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Followers
+                    </span>
+
+                </div>
+
+
+                <div class="aboutStat">
+
+                    <strong id="aboutFollowingCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Following
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     PROFILE PICTURE VIEWER
+========================================== -->
+
+<div
+    id="profilePictureViewer"
+    class="profilePictureViewer"
+    aria-hidden="true"
+>
+
+    <button
+        type="button"
+        id="closeProfilePictureViewer"
+        class="closeProfilePictureViewer"
+        aria-label="Close"
+    >
+        ×
+    </button>
+
+
+    <img
+        id="profilePictureViewerImage"
+        src=""
+        alt="Profile Picture"
+    >
+
+</div>
+
+
+
+<!-- =========================================
+     SCRIPTS
+========================================== -->
+
+<script src="./profile.js?v=7"></script>
+<script src="./notification-system.js?v=1"></script>
+<script src="./profile-posts.js?v=11"></script>
+<script src="./profile-comment-reactions.js?v=8"></script>
+<script src="./profile-reaction-persistence.js?v=2"></script>
+<script src="./profile-hover.js?v=1"></script>
+<script src="./profile-upgrade.js?v=1"></script>
+
+
+</body>
+
+</html>

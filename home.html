@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Home - Roleverse Haven</title>
+
+<link
+    rel="stylesheet"
+    href="home.css"
+>
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================== -->
+
+<header class="siteHeader">
+
+    <div class="siteHeaderInner">
+
+        <h1 class="siteLogo">
+            Roleverse Haven
+        </h1>
+
+
+        <nav class="siteNav">
+
+            <a
+                href="home.html"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="characters.html">
+                Characters
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="notifications.html">
+                Notifications
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN PAGE
+========================================== -->
+
+<main class="homePage">
+
+
+    <!-- =====================================
+         PAGE TITLE
+    ====================================== -->
+
+    <div class="homeHeading">
+
+        <h2>
+            News Feed
+        </h2>
+
+        <p>
+            See what the Roleverse is talking about.
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         HOMEPAGE GRID
+    ====================================== -->
+
+    <div class="homeLayout">
+
+
+        <!-- =================================
+             LEFT SIDEBAR
+        ================================== -->
+
+        <aside class="homeSidebar">
+
+
+            <section class="homeCard">
+
+                <h3>
+                    Your Profile
+                </h3>
+
+
+                <div class="homeProfilePreview">
+
+                    <div
+                        id="homeProfileAvatar"
+                        class="homeProfileAvatar"
+                    >
+                        👤
+                    </div>
+
+
+                    <div>
+
+                        <strong id="homeProfileName">
+                            Display Name
+                        </strong>
+
+                        <p>
+                            Roleplayer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="homeProfileStats">
+
+                    <span>
+
+                        <strong id="homeFriendCount">
+                            0
+                        </strong>
+
+                        Friends
+
+                    </span>
+
+
+                    <span>
+
+                        <strong id="homeFollowerCount">
+                            0
+                        </strong>
+
+                        Followers
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="profile.html"
+                    class="homeProfileLink"
+                >
+                    View Profile
+                </a>
+
+            </section>
+
+
+
+            <section class="homeCard">
+
+                <h3>
+                    Roleverse
+                </h3>
+
+                <p>
+                    Connect with roleplayers, create characters,
+                    and start new stories.
+                </p>
+
+            </section>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN FEED
+        ================================== -->
+
+        <section class="homeFeed">
+
+
+            <!-- =================================
+                 CREATE POST
+            ================================== -->
+
+            <section class="homeCard postComposer">
+
+                <div class="composerHeader">
+
+                    <div
+                        id="composerAvatar"
+                        class="composerAvatar"
+                    >
+                        👤
+                    </div>
+
+
+                    <div>
+
+                        <strong id="composerName">
+                            Display Name
+                        </strong>
+
+                        <p>
+                            Create a post
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <textarea
+                    id="postText"
+                    class="postInput"
+                    placeholder="What's on your mind?"
+                ></textarea>
+
+
+                <div class="composerBottom">
+
+
+                    <label
+                        for="postImageInput"
+                        class="photoButton"
+                    >
+                        📷 Add Photos
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="postImageInput"
+                        accept="image/*"
+                        multiple
+                    >
+
+
+                    <button
+                        id="createPostButton"
+                        class="postButton"
+                    >
+                        Post
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 FEED
+            ================================== -->
+
+            <div class="feedHeader">
+
+                <h2>
+                    Recent Posts
+                </h2>
+
+            </div>
+
+
+            <section id="postList">
+
+                <!-- Posts will appear here -->
+
+            </section>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     SCRIPTS
+========================================== -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Home - Roleverse Haven</title>
+
+<link
+    rel="stylesheet"
+    href="home.css"
+>
+
+<link
+    rel="stylesheet"
+    href="profile-hover.css"
+>
+
+</head>
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================== -->
+
+<header class="siteHeader">
+
+    <div class="siteHeaderInner">
+
+        <h1 class="siteLogo">
+            Roleverse Haven
+        </h1>
+
+
+        <nav class="siteNav">
+
+            <a
+                href="home.html"
+                class="active"
+            >
+                Home
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+            <a href="characters.html">
+                Characters
+            </a>
+
+            <a href="messages.html">
+                Messages
+            </a>
+
+            <a href="notifications.html">
+                Notifications
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     MAIN PAGE
+========================================== -->
+
+<main class="homePage">
+
+
+    <!-- =====================================
+         PAGE TITLE
+    ====================================== -->
+
+    <div class="homeHeading">
+
+        <h2>
+            News Feed
+        </h2>
+
+        <p>
+            See what the Roleverse is talking about.
+        </p>
+
+    </div>
+
+
+
+    <!-- =====================================
+         HOMEPAGE GRID
+    ====================================== -->
+
+    <div class="homeLayout">
+
+
+        <!-- =================================
+             LEFT SIDEBAR
+        ================================== -->
+
+        <aside class="homeSidebar">
+
+
+            <section class="homeCard">
+
+                <h3>
+                    Your Profile
+                </h3>
+
+
+                <div class="homeProfilePreview">
+
+                    <div
+                        id="homeProfileAvatar"
+                        class="homeProfileAvatar"
+                    >
+                        👤
+                    </div>
+
+
+                    <div>
+
+                        <strong id="homeProfileName">
+                            Display Name
+                        </strong>
+
+                        <p>
+                            Roleplayer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="homeProfileStats">
+
+                    <span>
+
+                        <strong id="homeFriendCount">
+                            0
+                        </strong>
+
+                        Friends
+
+                    </span>
+
+
+                    <span>
+
+                        <strong id="homeFollowerCount">
+                            0
+                        </strong>
+
+                        Followers
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="profile.html"
+                    class="homeProfileLink"
+                >
+                    View Profile
+                </a>
+
+            </section>
+
+
+
+            <section class="homeCard">
+
+                <h3>
+                    Roleverse
+                </h3>
+
+                <p>
+                    Connect with roleplayers, create characters,
+                    and start new stories.
+                </p>
+
+            </section>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN FEED
+        ================================== -->
+
+        <section class="homeFeed">
+
+
+            <!-- =================================
+                 CREATE POST
+            ================================== -->
+
+            <section class="homeCard postComposer">
+
+                <div class="composerHeader">
+
+                    <div
+                        id="composerAvatar"
+                        class="composerAvatar"
+                    >
+                        👤
+                    </div>
+
+
+                    <div>
+
+                        <strong id="composerName">
+                            Display Name
+                        </strong>
+
+                        <p>
+                            Create a post
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <textarea
+                    id="postText"
+                    class="postInput"
+                    placeholder="What's on your mind?"
+                ></textarea>
+
+
+                <div class="composerBottom">
+
+
+                    <label
+                        for="postImageInput"
+                        class="photoButton"
+                    >
+                        📷 Add Photos
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="postImageInput"
+                        accept="image/*"
+                        multiple
+                    >
+
+
+                    <button
+                        id="createPostButton"
+                        class="postButton"
+                    >
+                        Post
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 FEED
+            ================================== -->
+
+            <div class="feedHeader">
+
+                <h2>
+                    Recent Posts
+                </h2>
+
+            </div>
+
+
+            <section id="postList">
+
+                <!-- Posts will appear here -->
+
+            </section>
+
+
+        </section>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     SCRIPTS
+========================================== -->
+
+<script src="home.js?v=5"></script>
+<script src="home-reactions.js"></script>
+<script src="home-comments.js?v=4"></script>
+<script src="home-comment-reactions.js?v=1"></script>
+<script src="home-comment-options.js?v=1"></script>
+<script src="home-comment-replies.js?v=2"></script>
+<script src="home-reply-reactions.js?v=2"></script>
+<script src="home-post-options.js?v=1"></script>
+<script src="home-reply-options.js?v=1"></script>
+<script src="profile-hover.js?v=1"></script>
+
+</body>
+
+</html>

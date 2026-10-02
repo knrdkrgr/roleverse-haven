@@ -1,0 +1,4207 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f3f4f6;
+color: #222;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.siteHeader {
+position: sticky;
+top: 0;
+z-index: 1000;
+
+
+background: white;
+
+border-bottom: 1px solid #ddd;
+
+box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05);
+
+
+}
+
+.siteHeaderInner {
+max-width: 1200px;
+
+
+margin: 0 auto;
+
+padding: 16px 24px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 30px;
+
+
+}
+
+.siteLogo {
+margin: 0;
+
+
+font-size: 22px;
+
+white-space: nowrap;
+
+
+}
+
+.siteNav {
+display: flex;
+
+
+align-items: center;
+
+gap: 20px;
+
+flex-wrap: wrap;
+
+
+}
+
+.siteNav a {
+color: #555;
+
+
+text-decoration: none;
+
+font-size: 14px;
+
+font-weight: 600;
+
+
+}
+
+.siteNav a:hover {
+color: #222;
+}
+
+.siteNav a.active {
+color: #111;
+
+
+font-weight: 700;
+
+
+}
+
+/* =========================================
+MAIN PAGE
+========================================= */
+
+.homePage {
+max-width: 1200px;
+
+
+margin: 0 auto;
+
+padding: 30px 24px 60px;
+
+
+}
+
+.homeHeading {
+margin-bottom: 24px;
+}
+
+.homeHeading h2 {
+margin: 0 0 6px;
+
+
+font-size: 28px;
+
+
+}
+
+.homeHeading p {
+margin: 0;
+
+
+color: #777;
+
+font-size: 14px;
+
+
+}
+
+/* =========================================
+PAGE GRID
+========================================= */
+
+.homeLayout {
+display: grid;
+
+
+grid-template-columns:
+    260px
+    minmax(0, 1fr);
+
+gap: 24px;
+
+align-items: start;
+
+
+}
+
+/* =========================================
+SIDEBAR
+========================================= */
+
+.homeSidebar {
+display: flex;
+
+
+flex-direction: column;
+
+gap: 18px;
+
+position: sticky;
+
+top: 95px;
+
+
+}
+
+.homeCard {
+background: white;
+
+
+border: 1px solid #e1e1e1;
+
+border-radius: 14px;
+
+padding: 20px;
+
+box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.04);
+
+
+}
+
+.homeCard h3 {
+margin: 0 0 16px;
+
+
+font-size: 17px;
+
+
+}
+
+.homeCard p {
+color: #666;
+
+
+line-height: 1.5;
+
+font-size: 14px;
+
+
+}
+
+/* =========================================
+PROFILE PREVIEW
+========================================= */
+
+.homeProfilePreview {
+display: flex;
+
+
+align-items: center;
+
+gap: 12px;
+
+margin-bottom: 18px;
+
+
+}
+
+.homeProfileAvatar,
+.composerAvatar {
+width: 44px;
+
+
+height: 44px;
+
+flex-shrink: 0;
+
+border-radius: 50%;
+
+background: #eeeeee;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 20px;
+
+
+}
+
+.homeProfilePreview strong {
+display: block;
+
+
+font-size: 14px;
+
+
+}
+
+.homeProfilePreview p {
+margin: 3px 0 0;
+
+
+font-size: 12px;
+
+color: #888;
+
+
+}
+
+/* =========================================
+PROFILE STATS
+========================================= */
+
+.homeProfileStats {
+display: flex;
+
+
+gap: 14px;
+
+padding-top: 14px;
+
+border-top: 1px solid #eeeeee;
+
+
+}
+
+.homeProfileStats span {
+display: flex;
+
+
+flex-direction: column;
+
+gap: 3px;
+
+font-size: 11px;
+
+color: #777;
+
+
+}
+
+.homeProfileStats strong {
+font-size: 15px;
+
+
+color: #222;
+
+
+}
+
+.homeProfileLink {
+display: block;
+
+
+margin-top: 16px;
+
+text-align: center;
+
+padding: 9px;
+
+border-radius: 8px;
+
+background: #f1f1f1;
+
+color: #333;
+
+text-decoration: none;
+
+font-size: 13px;
+
+font-weight: 600;
+
+
+}
+
+.homeProfileLink:hover {
+background: #e8e8e8;
+}
+
+/* =========================================
+MAIN FEED
+========================================= */
+
+.homeFeed {
+min-width: 0;
+}
+
+/* =========================================
+POST COMPOSER
+========================================= */
+
+.postComposer {
+margin-bottom: 24px;
+}
+
+.composerHeader {
+display: flex;
+
+
+align-items: center;
+
+gap: 12px;
+
+margin-bottom: 16px;
+
+
+}
+
+.composerHeader strong {
+display: block;
+
+
+font-size: 14px;
+
+
+}
+
+.composerHeader p {
+margin: 3px 0 0;
+
+
+font-size: 12px;
+
+color: #888;
+
+
+}
+
+.postInput {
+display: block;
+
+
+width: 100%;
+
+min-height: 110px;
+
+resize: vertical;
+
+padding: 14px;
+
+border: 1px solid #ddd;
+
+border-radius: 10px;
+
+font-family: inherit;
+
+font-size: 14px;
+
+outline: none;
+
+
+}
+
+.postInput:focus {
+border-color: #aaa;
+}
+
+.composerBottom {
+display: flex;
+
+
+align-items: center;
+
+justify-content: flex-end;
+
+gap: 10px;
+
+margin-top: 14px;
+
+
+}
+
+.photoButton {
+padding: 9px 13px;
+
+
+border-radius: 8px;
+
+background: #f1f1f1;
+
+color: #444;
+
+font-size: 13px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+
+}
+
+.photoButton:hover {
+background: #e8e8e8;
+}
+
+#postImage {
+display: none;
+}
+
+.postButton {
+border: none;
+
+
+border-radius: 8px;
+
+padding: 9px 20px;
+
+background: #222;
+
+color: white;
+
+font-size: 13px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+
+}
+
+.postButton:hover {
+filter: brightness(0.9);
+}
+
+/* =========================================
+FEED HEADER
+========================================= */
+
+.feedHeader {
+margin-bottom: 12px;
+}
+
+.feedHeader h2 {
+margin: 0;
+
+
+font-size: 20px;
+
+
+}
+
+/* =========================================
+POSTS
+========================================= */
+
+#postList {
+display: flex;
+
+
+flex-direction: column;
+
+gap: 18px;
+
+
+}
+
+.homePost {
+background: white;
+
+
+border: 1px solid #e1e1e1;
+
+border-radius: 14px;
+
+padding: 20px;
+
+box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.04);
+
+
+}
+
+.homePost h3 {
+margin: 0;
+
+
+font-size: 15px;
+
+
+}
+
+.homePostTime {
+margin: 4px 0 16px;
+
+
+color: #888;
+
+font-size: 12px;
+
+
+}
+
+.homePostText {
+margin: 0 0 14px;
+
+
+white-space: pre-wrap;
+
+line-height: 1.5;
+
+font-size: 14px;
+
+
+}
+
+.homePost img {
+
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 500px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    margin-bottom: 16px;
+
+}
+
+.homePost .homeCommentAvatar img {
+
+    width: 34px;
+
+    height: 34px;
+
+    max-width: 34px;
+
+    max-height: 34px;
+
+    min-width: 34px;
+
+    min-height: 34px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 50%;
+
+    margin: 0;
+
+    display: block;
+
+}
+
+/* =========================================
+POST ACTIONS
+========================================= */
+
+.homePost button {
+border: none;
+
+
+background: transparent;
+
+padding: 8px 10px;
+
+border-radius: 7px;
+
+cursor: pointer;
+
+font-size: 13px;
+
+
+}
+
+.homePost button:hover {
+background: #f1f1f1;
+}
+
+.homeReactionPicker {
+margin: 4px 0 8px;
+
+
+padding: 6px;
+
+width: fit-content;
+
+background: white;
+
+border: 1px solid #ddd;
+
+border-radius: 10px;
+
+box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+
+}
+
+.homeReactionPicker button {
+font-size: 18px;
+
+
+padding: 5px;
+
+
+}
+
+.homeReactionCount {
+margin: 4px 0;
+
+
+color: #777;
+
+font-size: 12px;
+
+
+}
+
+/* =========================================
+COMMENTS
+========================================= */
+
+.homeCommentBox {
+margin-top: 12px;
+
+
+padding-top: 12px;
+
+border-top: 1px solid #eeeeee;
+
+
+}
+
+.homeCommentInput {
+width: 100%;
+
+
+min-height: 70px;
+
+resize: vertical;
+
+padding: 10px;
+
+border: 1px solid #ddd;
+
+border-radius: 8px;
+
+font-family: inherit;
+
+font-size: 13px;
+
+
+}
+
+.homeAddCommentButton {
+background: #f1f1f1 !important;
+}
+
+.homeCommentList {
+margin-top: 12px;
+}
+
+.homeCommentList p {
+padding: 9px 11px;
+
+
+margin: 8px 0;
+
+background: #f5f5f5;
+
+border-radius: 9px;
+
+font-size: 13px;
+
+line-height: 1.4;
+
+
+}
+
+/* =========================================
+MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+
+.siteHeaderInner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+
+.siteNav {
+    gap: 12px;
+}
+
+
+.homeLayout {
+    grid-template-columns: 1fr;
+}
+
+
+.homeSidebar {
+    position: static;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+.homePage {
+    padding: 20px 14px 40px;
+}
+
+
+.homeSidebar {
+    grid-template-columns: 1fr;
+}
+
+
+.homeHeading h2 {
+    font-size: 24px;
+}
+
+
+.composerBottom {
+    justify-content: space-between;
+}
+
+
+.photoButton {
+    flex: 1;
+
+    text-align: center;
+}
+
+
+.postButton {
+    padding-left: 18px;
+
+    padding-right: 18px;
+}
+
+
+}
+
+/* =========================================
+POST HEADER
+========================================= */
+
+.homePostHeader {
+display: flex;
+
+
+align-items: center;
+
+gap: 12px;
+
+margin-bottom: 16px;
+
+
+}
+
+.homePostAvatarWrapper {
+flex-shrink: 0;
+}
+
+.homePostAvatar {
+width: 44px;
+
+
+height: 44px;
+
+border-radius: 50%;
+
+display: block;
+
+object-fit: cover;
+
+
+}
+
+.homePostAvatarPlaceholder {
+background: #eeeeee;
+
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 20px;
+
+
+}
+
+.homePostAuthorInfo {
+min-width: 0;
+}
+
+.homePostAuthor {
+display: block;
+
+
+font-size: 14px;
+
+color: #222;
+
+
+}
+
+.homePostTime {
+margin: 3px 0 0;
+
+
+font-size: 12px;
+
+color: #888;
+
+
+}
+
+/* =========================================
+POST IMAGES
+========================================= */
+
+.homePostImages {
+display: grid;
+
+
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+gap: 8px;
+
+margin-bottom: 16px;
+
+
+}
+
+.homePostImage {
+width: 100%;
+
+
+max-height: 500px;
+
+object-fit: cover;
+
+border-radius: 10px;
+
+display: block;
+
+
+}
+
+.homePostImages:has(
+.homePostImage:only-child
+) {
+grid-template-columns: 1fr;
+}
+
+.homePostImages:has(
+.homePostImage:nth-child(3)
+) {
+grid-template-columns:
+repeat(2, minmax(0, 1fr));
+}
+
+/* =========================================
+POST ACTIONS
+========================================= */
+
+.homePostActions {
+display: flex;
+
+
+align-items: center;
+
+flex-wrap: wrap;
+
+gap: 3px;
+
+padding-top: 8px;
+
+border-top: 1px solid #eeeeee;
+
+
+}
+
+.homePostActions button {
+color: #555;
+}
+
+.homePostActions button:hover {
+color: #222;
+}
+
+/* =========================================
+SHARED POST
+========================================= */
+
+.homeSharedLabel {
+margin: 0 0 14px;
+
+
+padding-bottom: 10px;
+
+border-bottom: 1px solid #eeeeee;
+
+font-size: 12px;
+
+color: #777;
+
+
+}
+
+/* =========================================
+MOBILE POST IMAGES
+========================================= */
+
+@media (max-width: 600px) {
+
+
+.homePostImages {
+    grid-template-columns: 1fr;
+}
+
+
+}
+
+/* =========================================
+HOMEPAGE PROFILE AVATARS
+========================================= */
+
+.homeProfileAvatar {
+overflow: hidden;
+}
+
+.homeProfileAvatarImage {
+width: 100%;
+
+
+height: 100%;
+
+object-fit: cover;
+
+display: block;
+
+
+}
+
+.composerAvatar {
+overflow: hidden;
+}
+
+.composerAvatarImage {
+width: 100%;
+
+
+height: 100%;
+
+object-fit: cover;
+
+display: block;
+
+
+}
+
+/* =========================================
+   COMMENT AVATARS
+========================================= */
+
+.homeCommentHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.homeCommentAvatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.homeCommentAvatarImage {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 50%;
+
+}
+
+.homeCommentAuthorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeCommentAuthor {
+    font-size: 14px;
+}
+
+.homeCommentTime {
+    font-size: 12px;
+    color: #888;
+}
+
+.homeCommentText {
+    margin: 4px 0 12px 44px;
+}
+
+/* =========================================
+   COMMENT BOX
+========================================= */
+
+.homeCommentBox {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.homeCommentInput {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.homeAddCommentButton {
+    margin-top: 8px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.homeCommentList {
+    margin-top: 16px;
+}
+
+.homeComment {
+    margin-bottom: 14px;
+}
+
+.homeCommentHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.homeCommentAvatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.homeCommentAvatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.homeCommentAuthorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeCommentAuthor {
+    font-size: 14px;
+}
+
+.homeCommentTime {
+    font-size: 12px;
+    color: #888;
+}
+
+.homeCommentText {
+    margin: 4px 0 0 44px;
+    line-height: 1.5;
+}
+
+.homeReactionCount {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* =========================================
+   COMMENT SECTION POLISH
+========================================= */
+
+.homeCommentBox {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #e8e8e8;
+}
+
+
+/* =========================================
+   COMMENT INPUT
+========================================= */
+
+.homeCommentInput {
+    width: 100%;
+    min-height: 72px;
+    padding: 12px 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    resize: vertical;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #fafafa;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.homeCommentInput:focus {
+    outline: none;
+    border-color: #b9b9b9;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.homeCommentInput::placeholder {
+    color: #999;
+}
+
+
+/* =========================================
+   ADD COMMENT BUTTON
+========================================= */
+
+.homeAddCommentButton {
+    margin-top: 9px;
+    padding: 8px 17px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    transition:
+        opacity 0.2s ease,
+        transform 0.1s ease;
+}
+
+.homeAddCommentButton:hover {
+    opacity: 0.85;
+}
+
+.homeAddCommentButton:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   COMMENT LIST
+========================================= */
+
+.homeCommentList {
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   INDIVIDUAL COMMENT
+========================================= */
+
+.homeComment {
+    margin-bottom: 18px;
+}
+
+.homeComment:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   COMMENT HEADER
+========================================= */
+
+.homeCommentHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   COMMENT AVATAR
+========================================= */
+
+.homeCommentAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+.homeCommentAvatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================
+   COMMENT AUTHOR INFO
+========================================= */
+
+.homeCommentAuthorInfo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.homeCommentAuthor {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.homeCommentTime {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   COMMENT TEXT
+========================================= */
+
+.homeCommentText {
+    margin: 5px 0 0 46px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333333;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   COMMENT BUTTON
+========================================= */
+
+.homeCommentButton {
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE COMMENTS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .homeCommentInput {
+        min-height: 68px;
+    }
+
+    .homeCommentAvatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .homeCommentText {
+        margin-left: 44px;
+    }
+
+}
+
+/* =========================================
+   COMMENT AVATAR ALIGNMENT FIX
+========================================= */
+
+.homeCommentAvatar {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    max-width: 36px !important;
+    max-height: 36px !important;
+
+    border-radius: 50% !important;
+    overflow: hidden !important;
+
+    background: #eeeeee;
+    display: block !important;
+    flex-shrink: 0;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    line-height: 0 !important;
+    font-size: 0 !important;
+}
+
+.homeCommentAvatarImage {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+/* =========================================
+   COMMENT ACTIONS
+========================================= */
+
+.homeCommentActions {
+    margin: 6px 0 0 46px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.homeCommentActionButton {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    color: #777777;
+    cursor: pointer;
+}
+
+.homeCommentActionButton:hover {
+    text-decoration: underline;
+}
+
+.homeCommentActionButton[data-action="delete"] {
+    color: #a05a5a;
+}
+
+
+/* =========================================
+   COMMENT EDIT BOX
+========================================= */
+
+.homeCommentEditBox {
+    margin: 5px 0 0 46px;
+}
+
+.homeCommentEditInput {
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+
+    resize: vertical;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+
+    background: #fafafa;
+}
+
+.homeCommentEditInput:focus {
+    outline: none;
+    border-color: #b9b9b9;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   EDIT BUTTONS
+========================================= */
+
+.homeCommentEditActions {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.homeCommentEditSave,
+.homeCommentEditCancel {
+    border: none;
+    border-radius: 8px;
+    padding: 7px 14px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.homeCommentEditSave:hover,
+.homeCommentEditCancel:hover {
+    opacity: 0.85;
+}
+
+.homeCommentEditSave:active,
+.homeCommentEditCancel:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .homeCommentActions {
+        margin-left: 44px;
+    }
+
+    .homeCommentEditBox {
+        margin-left: 44px;
+    }
+
+}
+
+/* =========================================
+   COMMENT REACTIONS
+========================================= */
+
+.homeCommentReactionArea {
+    margin: 7px 0 0 46px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 28px;
+}
+
+.homeCommentReactionButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    color: #777;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.homeCommentReactionButton:hover {
+    background: #f1f1f1 !important;
+    border-radius: 6px;
+}
+
+.homeCommentReactionButton.active {
+    font-weight: 700;
+}
+
+
+/* =========================================
+   REACTION SUMMARY
+========================================= */
+
+.homeCommentReactionSummary {
+    align-items: center;
+    gap: 3px;
+
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   REACTION PICKER
+========================================= */
+
+.homeCommentReactionPicker {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 4px);
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    padding: 6px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    z-index: 20;
+}
+
+.homeCommentReactionPicker button {
+    width: 32px;
+    height: 32px;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 4px !important;
+    margin: 0 !important;
+
+    border-radius: 7px;
+
+    font-size: 18px !important;
+    cursor: pointer;
+
+    transition:
+        transform 0.1s ease,
+        background 0.15s ease;
+}
+
+.homeCommentReactionPicker button:hover {
+    background: #f1f1f1 !important;
+    transform: scale(1.12);
+}
+
+.homeCommentReactionPicker button.selected {
+    background: #eeeeee !important;
+}
+
+
+/* =========================================
+   MOBILE COMMENT REACTIONS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .homeCommentReactionArea {
+        margin-left: 44px;
+    }
+
+    .homeCommentReactionPicker {
+        max-width: calc(100vw - 90px);
+    }
+
+}
+
+/* =========================================
+   COMMENT REACTIONS
+========================================= */
+
+.homeCommentReactionArea {
+    margin: 7px 0 0 46px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 28px;
+}
+
+.homeCommentReactionButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    color: #777;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.homeCommentReactionButton:hover {
+    background: #f1f1f1 !important;
+    border-radius: 6px;
+}
+
+.homeCommentReactionButton.active {
+    font-weight: 700;
+}
+
+.homeCommentReactionSummary {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+.homeCommentReactionPicker {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 4px);
+
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    padding: 6px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    z-index: 50;
+}
+
+.homeCommentReactionPicker button {
+    width: 32px;
+    height: 32px;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 4px !important;
+    margin: 0 !important;
+
+    border-radius: 7px;
+
+    font-size: 18px !important;
+    cursor: pointer;
+}
+
+.homeCommentReactionPicker button:hover {
+    background: #f1f1f1 !important;
+    transform: scale(1.1);
+}
+
+.homeCommentReactionPicker button.selected {
+    background: #eeeeee !important;
+}
+
+@media (max-width: 600px) {
+
+    .homeCommentReactionArea {
+        margin-left: 44px;
+    }
+
+}
+
+/* =========================================
+   COMMENT REACTION POSITION
+========================================= */
+
+.homeCommentReactionArea {
+    margin: 7px 0 0 46px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 28px;
+}
+
+.homeCommentReactionButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    color: #777;
+
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.homeCommentReactionButton:hover {
+    background: #f1f1f1 !important;
+    border-radius: 6px;
+}
+
+.homeCommentReactionButton.active {
+    font-weight: 700;
+}
+
+.homeCommentReactionSummary {
+    display: inline-flex;
+
+    align-items: center;
+
+    font-size: 12px;
+    color: #666;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   REACTION PICKER
+========================================= */
+
+.homeCommentReactionPicker {
+    position: absolute;
+
+    left: 0;
+    bottom: calc(100% + 4px);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    padding: 6px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    z-index: 50;
+}
+
+.homeCommentReactionPicker button {
+    width: 32px;
+    height: 32px;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    padding: 4px !important;
+    margin: 0 !important;
+
+    border-radius: 7px;
+
+    font-size: 18px !important;
+
+    cursor: pointer;
+}
+
+.homeCommentReactionPicker button:hover {
+    background: #f1f1f1 !important;
+
+    transform: scale(1.1);
+}
+
+.homeCommentReactionPicker button.selected {
+    background: #eeeeee !important;
+}
+
+
+@media (max-width: 600px) {
+
+    .homeCommentReactionArea {
+        margin-left: 44px;
+    }
+
+}
+
+/* =========================================
+   COMMENT OPTIONS
+========================================= */
+
+.homeCommentOptions {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.homeCommentOptionsButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+    font-size: 15px !important;
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #777;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homeCommentOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+/* =========================================
+   OPTIONS DROPDOWN
+========================================= */
+
+.homeCommentOptionsMenu {
+    position: absolute;
+
+    right: 0;
+    top: calc(100% + 4px);
+
+    min-width: 90px;
+
+    padding: 5px;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    z-index: 100;
+}
+
+
+.homeCommentOption {
+    width: 100%;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 8px 10px !important;
+    margin: 0 !important;
+
+    text-align: left;
+
+    font-family: inherit;
+    font-size: 13px !important;
+    font-weight: 500;
+
+    color: #555;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homeCommentOption:hover {
+    background: #f3f3f3 !important;
+}
+
+
+.homeCommentOption[data-action="delete"] {
+    color: #a05a5a;
+}
+
+
+@media (max-width: 600px) {
+
+    .homeCommentOptionsButton {
+        padding: 3px 5px !important;
+    }
+
+}
+
+/* =========================================
+   COMMENT REPLIES
+========================================= */
+
+.homeCommentReplyArea {
+    margin: 4px 0 0 46px;
+}
+
+.homeCommentReplyButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 600;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+.homeCommentReplyButton:hover {
+    background: #f1f1f1 !important;
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   REPLY FORM
+========================================= */
+
+.homeCommentReplyForm {
+    margin-top: 6px;
+}
+
+.homeCommentReplyInput {
+    width: 100%;
+
+    min-height: 60px;
+
+    padding: 9px 11px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dcdcdc;
+    border-radius: 9px;
+
+    resize: vertical;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.5;
+
+    background: #fafafa;
+}
+
+.homeCommentReplyInput:focus {
+    outline: none;
+
+    border-color: #b9b9b9;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+
+.homeCommentReplyFormActions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 7px;
+
+    margin-top: 7px;
+}
+
+
+.homeCommentReplyCancel,
+.homeCommentReplySubmit {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 6px 12px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.homeCommentReplyCancel {
+    background: #eeeeee;
+    color: #666;
+}
+
+
+.homeCommentReplySubmit {
+    background: #333333;
+    color: #ffffff;
+}
+
+
+.homeCommentReplyCancel:hover,
+.homeCommentReplySubmit:hover {
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   REPLIES
+========================================= */
+
+.homeCommentReplies {
+    margin: 8px 0 0 46px;
+
+    padding-left: 14px;
+
+    border-left: 2px solid #eeeeee;
+}
+
+
+.homeCommentReply {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-bottom: 10px;
+}
+
+
+.homeCommentReplyAvatar {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+    min-height: 30px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 13px;
+}
+
+
+.homeCommentReplyAvatarImage {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.homeCommentReplyContent {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.homeCommentReplyHeader {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    margin-bottom: 2px;
+}
+
+
+.homeCommentReplyAuthor {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+
+.homeCommentReplyTime {
+    font-size: 11px;
+
+    color: #999;
+}
+
+
+.homeCommentReplyText {
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #444;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .homeCommentReplyArea {
+        margin-left: 44px;
+    }
+
+    .homeCommentReplies {
+        margin-left: 44px;
+    }
+
+}
+
+/* =========================================
+   REPLY REACTIONS
+========================================= */
+
+.homeReplyReactionArea {
+    margin: 5px 0 0 0;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 26px;
+}
+
+
+.homeReplyReactionButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+    font-size: 11px !important;
+    font-weight: 600;
+
+    color: #777;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homeReplyReactionButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+.homeReplyReactionButton.active {
+    font-weight: 700;
+}
+
+
+.homeReplyReactionSummary {
+    display: inline-flex;
+
+    align-items: center;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #666;
+}
+
+
+/* =========================================
+   REPLY REACTION PICKER
+========================================= */
+
+.homeReplyReactionPicker {
+    position: absolute;
+
+    left: 0;
+
+    bottom: calc(100% + 4px);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    z-index: 60;
+}
+
+
+.homeReplyReactionPicker button {
+    width: 30px;
+    height: 30px;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    padding: 4px !important;
+    margin: 0 !important;
+
+    border-radius: 7px;
+
+    font-size: 17px !important;
+
+    cursor: pointer;
+}
+
+
+.homeReplyReactionPicker button:hover {
+    background: #f1f1f1 !important;
+
+    transform: scale(1.1);
+}
+
+
+.homeReplyReactionPicker button.selected {
+    background: #eeeeee !important;
+}
+
+/* =========================================
+   REPLY REACTIONS
+========================================= */
+
+.homeReplyReactionArea {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+
+    min-height: 26px;
+}
+
+
+.homeReplyReactionButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+
+    font-size: 11px !important;
+    font-weight: 600;
+
+    color: #777;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homeReplyReactionButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+.homeReplyReactionButton.active {
+    font-weight: 700;
+}
+
+
+.homeReplyReactionSummary {
+    display: inline-flex;
+
+    align-items: center;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #666;
+}
+
+
+/* =========================================
+   REPLY REACTION PICKER
+========================================= */
+
+.homeReplyReactionPicker {
+    position: absolute;
+
+    left: 0;
+
+    bottom: calc(100% + 4px);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 2px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    z-index: 100;
+}
+
+
+.homeReplyReactionPicker button {
+    width: 30px;
+    height: 30px;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 4px !important;
+    margin: 0 !important;
+
+    border-radius: 7px;
+
+    font-size: 17px !important;
+
+    cursor: pointer;
+}
+
+
+.homeReplyReactionPicker button:hover {
+    background: #f1f1f1 !important;
+
+    transform: scale(1.1);
+}
+
+
+.homeReplyReactionPicker button.selected {
+    background: #eeeeee !important;
+}
+
+/* =========================================
+   POST OPTIONS
+========================================= */
+
+.homePostOptions {
+    position: relative;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.homePostOptionsButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 4px 7px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+
+    font-size: 16px !important;
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #777;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+}
+
+
+.homePostOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+/* =========================================
+   OPTIONS MENU
+========================================= */
+
+.homePostOptionsMenu {
+    position: absolute;
+
+    right: 0;
+    top: calc(100% + 5px);
+
+    min-width: 90px;
+
+    padding: 5px;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    z-index: 100;
+}
+
+
+.homePostOption {
+    width: 100%;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 8px 10px !important;
+    margin: 0 !important;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    font-size: 13px !important;
+    font-weight: 500;
+
+    color: #555;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homePostOption:hover {
+    background: #f3f3f3 !important;
+}
+
+
+.homePostOption[data-action="delete"] {
+    color: #a05a5a;
+}
+
+/* =========================================
+   POST OPTIONS
+========================================= */
+
+.homePostHeader {
+    display: flex;
+    align-items: center;
+}
+
+
+.homePostAuthorInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.homePostOptions {
+    position: relative;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.homePostOptionsButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 4px 7px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+    font-size: 16px !important;
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #777777;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+}
+
+
+.homePostOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+.homePostOptionsMenu {
+    position: absolute;
+
+    right: 0;
+    top: calc(100% + 5px);
+
+    min-width: 90px;
+
+    padding: 5px;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    z-index: 100;
+}
+
+
+.homePostOption {
+    width: 100%;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 8px 10px !important;
+    margin: 0 !important;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    font-size: 13px !important;
+    font-weight: 500;
+
+    color: #555555;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homePostOption:hover {
+    background: #f3f3f3 !important;
+}
+
+
+.homePostOption[data-action="delete"] {
+    color: #a05a5a;
+}
+
+/* =========================================
+   REPLY OPTIONS
+========================================= */
+
+.homeCommentReplyHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.homeCommentReplyAuthor {
+    flex-shrink: 0;
+}
+
+
+.homeCommentReplyTime {
+    margin-left: 6px;
+}
+
+
+.homeReplyOptions {
+    position: relative;
+
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.homeReplyOptionsButton {
+    border: none !important;
+    background: transparent !important;
+
+    padding: 3px 6px !important;
+    margin: 0 !important;
+
+    font-family: inherit;
+
+    font-size: 14px !important;
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #777777;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homeReplyOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+.homeReplyOptionsMenu {
+    position: absolute;
+
+    right: 0;
+    top: calc(100% + 4px);
+
+    min-width: 90px;
+
+    padding: 5px;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.10);
+
+    z-index: 150;
+}
+
+
+.homeReplyOption {
+    width: 100%;
+
+    border: none !important;
+    background: transparent !important;
+
+    padding: 8px 10px !important;
+    margin: 0 !important;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    font-size: 13px !important;
+    font-weight: 500;
+
+    color: #555555;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+
+.homeReplyOption:hover {
+    background: #f3f3f3 !important;
+}
+
+
+.homeReplyOption[data-action="delete"] {
+    color: #a05a5a;
+}
+
+
+/* =========================================
+   REPLY EDIT
+========================================= */
+
+.homeReplyEditBox {
+    margin-top: 6px;
+    width: 100%;
+}
+
+
+.homeReplyEditInput {
+    width: 100%;
+
+    min-height: 65px;
+
+    padding: 9px 11px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 9px;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    background: #fafafa;
+}
+
+
+.homeReplyEditInput:focus {
+    outline: none;
+
+    border-color: #b9b9b9;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+
+.homeReplyEditActions {
+    margin-top: 7px;
+
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.homeReplyEditSave,
+.homeReplyEditCancel {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 6px 12px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.homeReplyEditSave:hover,
+.homeReplyEditCancel:hover {
+    opacity: 0.85;
+}
+
+
+.homeReplyEditSave:active,
+.homeReplyEditCancel:active {
+    transform: scale(0.97);
+}
+
+/* =========================================
+   COMMENT + REPLY ACTION LAYOUT
+========================================= */
+
+.homeCommentCombinedActions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap;
+}
+
+.homeCommentReplyButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 3px 0 !important;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: #777777;
+    cursor: pointer;
+}
+
+.homeCommentReplyButton:hover {
+    color: #444444;
+}
+
+.homeCommentReplyArea {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.homeCommentReplyForm {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.homeCommentReplyInput {
+    width: 100%;
+    min-height: 58px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 9px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.homeCommentReplyInput:focus {
+    outline: none;
+    border-color: #bdbdbd;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.homeCommentReplyFormActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+    margin-top: 6px;
+}
+
+.homeCommentReplyCancel,
+.homeCommentReplySubmit {
+    border: none;
+    border-radius: 7px;
+    padding: 6px 11px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   REPLY REACTION
+========================================= */
+
+.homeReplyReactionArea {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 5px;
+}
+
+.homeReplyReactionButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 3px 0 !important;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: #777777;
+    cursor: pointer;
+}
+
+.homeReplyReactionButton:hover {
+    color: #444444;
+}
+
+.homeReplyReactionButton.active {
+    font-weight: 700;
+}
+
+.homeReplyReactionSummary {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    color: #777777;
+}
+
+.homeReplyReactionPicker {
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 5px);
+    display: none;
+    align-items: center;
+    gap: 2px;
+    padding: 5px 6px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 9px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    z-index: 200;
+}
+
+.homeReplyReaction {
+    border: none !important;
+    background: transparent !important;
+    padding: 4px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.homeReplyReaction:hover {
+    background: #f1f1f1 !important;
+}
+
+.homeReplyReaction.selected {
+    background: #eeeeee !important;
+}
+
+/* =========================================
+   REPLY SIZE + OPTIONS FINAL FIX
+========================================= */
+
+.homeCommentReply {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.homeCommentReplyAvatar {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    min-height: 27px;
+    max-width: 27px;
+    max-height: 27px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+.homeCommentReplyAvatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.homeCommentReplyContent {
+    min-width: 0;
+    flex: 1;
+    width: 0;
+}
+
+.homeCommentReplyHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 1px;
+    gap: 5px;
+}
+
+.homeCommentReplyAuthor {
+    flex-shrink: 0;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.homeCommentReplyTime {
+    margin-left: 0;
+    flex-shrink: 0;
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+.homeCommentReplyText {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #444;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.homeReplyOptions {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.homeReplyOptionsButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 2px 5px !important;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 13px !important;
+    font-weight: 700;
+    line-height: 1;
+    color: #777;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.homeReplyOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+.homeReplyOptionsMenu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 4px);
+    min-width: 90px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 9px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    z-index: 1000;
+}
+
+.homeReplyOption {
+    width: 100%;
+    border: none !important;
+    background: transparent !important;
+    padding: 7px 9px !important;
+    margin: 0 !important;
+    text-align: left;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 500;
+    color: #555555;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.homeReplyOption:hover {
+    background: #f3f3f3 !important;
+}
+
+.homeReplyOption[data-action="delete"] {
+    color: #a05a5a;
+}
+
+.homeReplyReactionArea {
+    margin-top: 3px;
+    min-height: 23px;
+    gap: 6px;
+}
+
+.homeReplyReactionButton {
+    padding: 2px 0 !important;
+    font-size: 11px !important;
+}
+
+.homeReplyReactionSummary {
+    font-size: 10px;
+}
+
+.homeReplyReactionPicker {
+    z-index: 1001;
+}
+
+/* =========================================
+   REPLY SIZE + OPTIONS FINAL FIX
+========================================= */
+
+.homeCommentReplies {
+    margin: 6px 0 0 46px;
+    padding-left: 12px;
+    border-left: 2px solid #eeeeee;
+}
+
+
+/* =========================================
+   REPLY ROW
+========================================= */
+
+.homeCommentReply {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   REPLY AVATAR
+========================================= */
+
+.homeCommentReplyAvatar {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    max-width: 24px !important;
+    max-height: 24px !important;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-size: 10px;
+}
+
+.homeCommentReplyAvatarImage {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================
+   REPLY CONTENT
+========================================= */
+
+.homeCommentReplyContent {
+    min-width: 0;
+    width: 0;
+    flex: 1;
+}
+
+
+/* =========================================
+   REPLY HEADER
+========================================= */
+
+.homeCommentReplyHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0;
+    gap: 4px;
+}
+
+.homeCommentReplyAuthor {
+    flex-shrink: 0;
+    font-size: 11px !important;
+    line-height: 1.25;
+}
+
+.homeCommentReplyTime {
+    margin-left: 0;
+    flex-shrink: 0;
+    font-size: 9px !important;
+    line-height: 1.25;
+}
+
+
+/* =========================================
+   REPLY TEXT
+========================================= */
+
+.homeCommentReplyText {
+    margin: 1px 0 0;
+    font-size: 11px !important;
+    line-height: 1.35;
+    color: #444;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   REPLY OPTIONS
+========================================= */
+
+.homeReplyOptions {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.homeReplyOptionsButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 1px 4px !important;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 700;
+    line-height: 1;
+    color: #888;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.homeReplyOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+.homeReplyOptionsMenu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 3px);
+    min-width: 85px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    z-index: 1000;
+}
+
+.homeReplyOption {
+    width: 100%;
+    border: none !important;
+    background: transparent !important;
+    padding: 6px 8px !important;
+    margin: 0 !important;
+    text-align: left;
+    font-family: inherit;
+    font-size: 11px !important;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.homeReplyOption:hover {
+    background: #f3f3f3 !important;
+}
+
+.homeReplyOption[data-action="delete"] {
+    color: #a05a5a;
+}
+
+
+/* =========================================
+   REPLY REACTIONS
+========================================= */
+
+.homeReplyReactionArea {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 1px;
+    min-height: 19px;
+}
+
+.homeReplyReactionButton {
+    border: none !important;
+    background: transparent !important;
+    padding: 1px 0 !important;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 10px !important;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+}
+
+.homeReplyReactionButton:hover {
+    color: #555;
+}
+
+.homeReplyReactionButton.active {
+    font-weight: 700;
+}
+
+.homeReplyReactionSummary {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 9px !important;
+    color: #888;
+}
+
+.homeReplyReactionPicker {
+    z-index: 1001;
+}
+
+css
+/* =========================================
+   FINAL POST LAYOUT / SPACING FIX
+   ========================================= */
+
+/* -----------------------------------------
+   POST CARD
+----------------------------------------- */
+
+.homePost {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* -----------------------------------------
+   POST HEADER
+----------------------------------------- */
+
+.homePostHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.homePostAvatarWrapper {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+}
+
+.homePostAvatar {
+    width: 44px;
+    height: 44px;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.homePostAuthorInfo {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+}
+
+.homePostAuthor {
+    display: block;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #222;
+}
+
+.homePostTime {
+    margin: 3px 0 0;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #888;
+}
+
+
+/* -----------------------------------------
+   POST OPTIONS
+----------------------------------------- */
+
+.homePostOptions {
+    flex: 0 0 auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.homePostOptionsButton {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 5px 8px !important;
+    margin: 0 !important;
+    font-family: inherit;
+    font-size: 16px !important;
+    font-weight: 700;
+    line-height: 1;
+    color: #777;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.homePostOptionsButton:hover {
+    background: #f1f1f1 !important;
+}
+
+
+/* -----------------------------------------
+   POST CONTENT
+----------------------------------------- */
+
+.homePostText {
+    width: 100%;
+    margin: 0 0 16px;
+    line-height: 1.5;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.homePostImages {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+
+/* -----------------------------------------
+   MAIN POST ACTIONS
+----------------------------------------- */
+
+.homePostActions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: nowrap;
+    padding-top: 8px;
+    border-top: 1px solid #eeeeee;
+}
+
+
+/* Every main post action gets equal space */
+
+.homePostActions > button {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* Make the action buttons visually balanced */
+
+.homePostActionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 36px;
+    padding: 8px 10px !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 8px;
+    color: #555;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.homePostActionButton:hover {
+    background: #f1f1f1 !important;
+    color: #222;
+}
+
+
+/* -----------------------------------------
+   MAIN REACTION BUTTON
+----------------------------------------- */
+
+.homeReactionButton {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.homeReactionIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.homeReactionText {
+    display: inline-block;
+}
+
+
+/* -----------------------------------------
+   REACTION COUNT
+----------------------------------------- */
+
+.homeReactionCount {
+    display: inline-block;
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #666;
+    font-weight: 500;
+}
+
+
+/* -----------------------------------------
+   REACTION PICKER
+----------------------------------------- */
+
+/*
+   The picker should NOT inherit the equal-width
+   behavior of the main action buttons.
+*/
+
+.homeReactionPicker {
+    width: fit-content !important;
+    max-width: max-content;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto !important;
+    gap: 2px;
+    margin: 4px 0 8px;
+    padding: 6px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.homeReactionPicker button {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 30px;
+    padding: 5px !important;
+    border: none !important;
+    background: transparent !important;
+    font-size: 18px !important;
+    border-radius: 7px;
+}
+
+.homeReactionPicker button:hover {
+    background: #f1f1f1 !important;
+}
+
+
+/* -----------------------------------------
+   SHARED POST LABEL
+----------------------------------------- */
+
+.homeSharedLabel {
+    width: 100%;
+}
+
+
+/* -----------------------------------------
+   COMMENT SECTION
+----------------------------------------- */
+
+.homeCommentBox {
+    width: 100%;
+}
+
+.homeCommentInput {
+    width: 100%;
+}
+
+
+/* -----------------------------------------
+   MOBILE POST ACTIONS
+----------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .homePost {
+        padding: 16px;
+    }
+
+    .homePostHeader {
+        gap: 10px;
+    }
+
+    .homePostAvatarWrapper,
+    .homePostAvatar {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+    }
+
+    .homePostAuthor {
+        font-size: 13px;
+    }
+
+    .homePostTime {
+        font-size: 11px;
+    }
+
+    .homePostActions {
+        gap: 2px;
+    }
+
+    .homePostActionButton {
+        padding: 7px 5px !important;
+        font-size: 12px;
+        gap: 3px;
+    }
+
+    .homeReactionPicker {
+        max-width: calc(100vw - 60px);
+    }
+
+}
+
+/* =========================================
+   FINAL MAIN POST WIDTH + ALIGNMENT FIX
+   ========================================= */
+
+#postList {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.homePost {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Make every main post section use the full card width */
+
+.homePostHeader,
+.homePostText,
+.homePostImages,
+.homePostActions,
+.homePostReactionArea,
+.homeSharedLabel,
+.homeCommentBox {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.homePostHeader {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 12px;
+}
+
+.homePostAvatarWrapper {
+    flex: 0 0 44px;
+    width: 44px;
+}
+
+.homePostAuthorInfo {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+}
+
+.homePostAuthor {
+    width: 100%;
+    margin: 0;
+}
+
+.homePostTime {
+    width: 100%;
+    margin: 3px 0 0;
+}
+
+/* Three-dot options stays at the far right */
+
+.homePostOptions {
+    margin-left: auto;
+    flex: 0 0 auto;
+    width: auto;
+}
+
+/* Actual post text */
+
+.homePostText {
+    display: block;
+    margin: 0 0 16px;
+    padding: 0;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Images */
+
+.homePostImages {
+    display: grid;
+    width: 100%;
+    margin: 0 0 16px;
+}
+
+/* Reaction picker should NOT stretch across the card */
+
+.homeReactionPicker {
+    width: fit-content !important;
+    max-width: 100%;
+    flex: 0 0 auto !important;
+}
+
+/* Action row */
+
+.homePostActions {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Comment area */
+
+.homeCommentBox {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Comment input */
+
+.homeCommentInput {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Prevent anything inside the card from forcing a narrow layout */
+
+.homePost * {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   FINAL HOME FEED WIDTH FIX
+   ========================================= */
+
+.homePage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.homeLayout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.homeSidebar {
+    width: 240px;
+    min-width: 0;
+}
+
+.homeFeed {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+/* Composer should use the entire feed width */
+
+.postComposer {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+/* Feed heading */
+
+.feedHeader {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Main post list */
+
+#postList {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Main post cards */
+
+#postList .homePost {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Everything inside the post follows the card width */
+
+#postList .homePostHeader,
+#postList .homePostText,
+#postList .homePostImages,
+#postList .homePostActions {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .homePage {
+        padding: 16px;
+    }
+
+    .homeLayout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .homeSidebar {
+        width: 100%;
+    }
+
+    .homeFeed {
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   MAIN POST HEADER - ACTUAL HOME.JS CLASSES
+   ========================================= */
+
+#postList .homePost {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+/* -----------------------------------------
+   HEADER
+----------------------------------------- */
+
+#postList .homePostHeader {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+   AUTHOR AREA
+----------------------------------------- */
+
+#postList .homePostAuthorArea {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* -----------------------------------------
+   AVATAR
+----------------------------------------- */
+
+#postList .homePostAvatar {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+
+#postList .homePostAvatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+
+/* -----------------------------------------
+   NAME + TIME
+----------------------------------------- */
+
+#postList .homePostAuthorDetails {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+}
+
+
+#postList .homePostAuthorName {
+    display: block;
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #222;
+    overflow-wrap: anywhere;
+}
+
+
+#postList .homePostTimestamp {
+    display: block;
+    width: 100%;
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #888;
+}
+
+
+/* -----------------------------------------
+   THREE-DOT MENU
+----------------------------------------- */
+
+#postList .homePostMenu {
+    position: relative;
+    flex: 0 0 auto;
+    width: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+#postList .homePostMenuButton {
+    width: auto !important;
+    min-width: 32px;
+    height: 32px;
+    padding: 5px 8px !important;
+    margin: 0;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 18px !important;
+    line-height: 1;
+    color: #777;
+    cursor: pointer;
+}
+
+
+#postList .homePostMenuButton:hover {
+    background: #f1f1f1 !important;
+    color: #222;
+}
+
+
+/* -----------------------------------------
+   POST CONTENT
+----------------------------------------- */
+
+#postList .homePostContent {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+#postList .homePostText {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 16px;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #222;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* -----------------------------------------
+   SHARED LABEL
+----------------------------------------- */
+
+#postList .homePostSharedLabel {
+    width: 100%;
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* -----------------------------------------
+   POST IMAGES
+----------------------------------------- */
+
+#postList .homePostImages {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0 0 16px;
+    box-sizing: border-box;
+}
+
+
+#postList .homePostImageWrapper {
+    width: 100%;
+    min-width: 0;
+}
+
+
+#postList .homePostImage {
+    width: 100%;
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* -----------------------------------------
+   POST ACTIONS
+----------------------------------------- */
+
+#postList .homePostActions {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+   REACTION PICKER
+----------------------------------------- */
+
+#postList .homeReactionPicker {
+    width: fit-content !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 600px) {
+
+    #postList .homePost {
+        padding: 16px;
+    }
+
+    #postList .homePostHeader {
+        gap: 9px;
+    }
+
+    #postList .homePostAuthorArea {
+        gap: 9px;
+    }
+
+    #postList .homePostAvatar {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        flex-basis: 40px;
+    }
+
+    #postList .homePostAuthorName {
+        font-size: 13px;
+    }
+
+    #postList .homePostTimestamp {
+        font-size: 11px;
+    }
+
+}

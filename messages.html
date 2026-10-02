@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Messages - Roleverse Haven</title>
+
+    <link rel="stylesheet" href="messages.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <h1>Roleverse Haven</h1>
+
+        <nav>
+
+            <a href="home.html">Home</a>
+
+            <a href="profile.html">Profile</a>
+
+            <a href="characters.html">Characters</a>
+
+            <a href="messages.html">Messages</a>
+
+            <a href="notifications.html">Notifications</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+        <div class="messagesPageHeader">
+
+            <h2>Messages</h2>
+
+            <button
+                type="button"
+                id="newMessageButton"
+                class="newMessageButton"
+            >
+                + New Message
+            </button>
+
+        </div>
+
+
+        <div class="messagesLayout">
+
+
+            <!-- =====================================
+                 CONVERSATION LIST
+            ====================================== -->
+
+            <aside class="conversationPanel">
+
+                <div class="conversationSearch">
+
+                    <input
+                        type="text"
+                        id="conversationSearchInput"
+                        placeholder="Search conversations..."
+                    >
+
+                </div>
+
+
+                <div
+                    id="conversationList"
+                    class="conversationList"
+                ></div>
+
+            </aside>
+
+
+            <!-- =====================================
+                 ACTIVE CONVERSATION
+            ====================================== -->
+
+            <section class="conversationWindow">
+
+
+                <!-- CONVERSATION HEADER -->
+
+                <div class="conversationHeader">
+
+                    <div class="conversationHeaderProfile">
+
+                        <div class="conversationHeaderAvatar">
+
+                            <span>👤</span>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 id="conversationName">
+                                Roleplayer Two
+                            </h3>
+
+                            <span class="conversationStatus">
+                                Active conversation
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="conversationOptionsButton"
+                        aria-label="Conversation options"
+                    >
+                        •••
+                    </button>
+
+                </div>
+
+
+                <!-- MESSAGE AREA -->
+
+                <div
+                    id="messageArea"
+                    class="messageArea"
+                ></div>
+
+
+                <!-- MESSAGE INPUT -->
+
+                <div class="messageInputArea">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Write a message..."
+                        rows="1"
+                    ></textarea>
+
+
+                    <button
+                        type="button"
+                        id="sendMessageButton"
+                    >
+                        Send
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="messages.js?v=4"></script>
+
+</body>
+
+</html>

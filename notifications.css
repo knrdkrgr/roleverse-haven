@@ -1,0 +1,478 @@
+/* =========================================
+   NOTIFICATIONS PAGE
+   ========================================= */
+
+body {
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    background: #f7f7f7;
+
+    color: #222;
+
+}
+
+
+/* Header */
+
+header {
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    padding: 18px 25px;
+
+}
+
+
+header h1 {
+
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+}
+
+
+/* Navigation */
+
+nav {
+
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+
+nav a {
+
+    color: #555;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+nav a:hover {
+
+    color: #111;
+
+}
+
+
+/* Main */
+
+main {
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 0 18px;
+
+}
+
+
+/* Notifications header */
+
+.notificationsHeader {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.notificationsHeader h2 {
+
+    margin: 0;
+
+}
+
+
+/* Mark all as read */
+
+#markAllReadButton {
+
+    border: none;
+
+    background: #222;
+
+    color: #ffffff;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+}
+
+
+#markAllReadButton:hover {
+
+    background: #444;
+
+}
+
+
+/* =========================================
+   NOTIFICATION
+   ========================================= */
+
+.notification {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+
+}
+
+
+.notification:hover {
+
+    background: #fafafa;
+
+}
+
+
+/* Unread notification */
+
+.notification.unread {
+
+    background: #f1f5ff;
+
+    border-color: #d8e2ff;
+
+}
+
+
+/* =========================================
+   NOTIFICATION INNER
+   ========================================= */
+
+.notificationInner {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   AVATAR
+   ========================================= */
+
+.notificationAvatar {
+
+    position: relative;
+
+    width: 46px;
+
+    height: 46px;
+
+    min-width: 46px;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    overflow: visible;
+
+}
+
+
+.notificationAvatarImage {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.notificationAvatarFallback {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eeeeee;
+
+    font-size: 21px;
+
+}
+
+
+/* =========================================
+   NOTIFICATION TYPE ICON
+   ========================================= */
+
+.notificationTypeIcon {
+
+    position: absolute;
+
+    right: -3px;
+
+    bottom: -3px;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.notificationContent {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.notificationText {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+
+    color: #333;
+
+}
+
+
+.notificationText strong {
+
+    color: #222;
+
+    font-weight: 700;
+
+}
+
+
+.notificationContext {
+
+    color: #333;
+
+}
+
+
+/* =========================================
+   TIME
+   ========================================= */
+
+.notificationTime {
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #888;
+
+}
+
+
+/* =========================================
+   OPTIONS
+   ========================================= */
+
+.notificationOptions {
+
+    position: relative;
+
+    flex-shrink: 0;
+
+}
+
+
+.notificationOptionsButton {
+
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #777;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.notificationOptionsButton:hover {
+
+    background: #eeeeee;
+
+    color: #222;
+
+}
+
+
+/* =========================================
+   EMPTY STATE
+   ========================================= */
+
+#noNotificationsMessage {
+
+    text-align: center;
+
+    color: #888;
+
+    padding: 40px 10px;
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    main {
+
+        margin-top: 20px;
+
+    }
+
+
+    .notificationsHeader {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    #markAllReadButton {
+
+        width: 100%;
+
+    }
+
+
+    .notification {
+
+        padding: 13px 14px;
+
+    }
+
+
+    .notificationAvatar,
+    .notificationAvatarImage,
+    .notificationAvatarFallback {
+
+        width: 42px;
+
+        height: 42px;
+
+        min-width: 42px;
+
+    }
+
+
+    .notificationTypeIcon {
+
+        width: 19px;
+
+        height: 19px;
+
+        font-size: 10px;
+
+    }
+
+}
